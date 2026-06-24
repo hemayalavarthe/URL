@@ -60,4 +60,13 @@ instagram.com/developer > Click on API Console  we can extract lat and long from
 FASTAPI:
 -> Create a directory using mkdir > Navigate to the created directory > create another directory > navigate to that > create a python virtual env using 'python -m venv .venv' 
 > activate the virtual env using '.venv\Scripts\activate' > check for python using 'where python' which gives venv python.exe path
->
+> After venv creation install fastapi
+> in main.py file include the below code and run 'fastapi dev' in powershell
+from fastapi import FastAPI
+app=FastAPI()
+@app.get("/")
+async def root():
+    return {"msg":"Hello"}
+
+OPEN API: FastAPI generates a "schema" with all your API using the OpenAPI standard for defining APIs. This schema definition includes your API paths, the possible parameters they take
+In OpenAPI, each of the HTTP methods is called an "operation".
