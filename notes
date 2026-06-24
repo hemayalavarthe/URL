@@ -1,1 +1,63 @@
+HTTp: Hyper Text Transfer Protocol
+-> Communication b/w servers and clients
+-> HTTP is stateless (every req is independent similar to transactions)
+HTTPS:  Hyper Text Transfer Protocol Secure
+->Data is encrypted. encrypted by SSL/TLS certificate
 
+HTTP METHODS:
+Get: Retrieves data from server
+POST: submit data to server
+PUT: Update data already on the server
+DELETE: Deletes data from server
+
+HTTP header fields:
+i) Req headers: cookies,accept-xxx, content-type,content-length,authorization,user-agent, referrer
+ii) Res headers: server, set-cookie,content-type, content-length,date
+iii) General headers: Req URL, Req method, Status code, Remote address, Referral policy
+In URL: method-path-Protocol
+
+HTTP Status Codes:
+1xx: Informational
+Request received / processing
+2xx: Success
+Successfully received, understood and accepted
+3xx: Redirect
+Further action must be taken / redirect
+4xx: Client Error
+Request does not have what it needs
+5xx: Server Error
+Server failed to fulfil an apparent valid request
+
+Examples of status codes:
+200 – OK
+201 – OK created
+301 – Moved to new URL
+302 - A 302 status code is a temporary redirect that tells the browser to fetch the requested resource from a different URL
+304 – Not modified (Cached version)
+400 – Bad request
+401 – Unauthorized
+404 – Not found
+500 – Internal server error
+
+--getpostman.com > where we get all the html code and info about headers, response etc from urls
+
+
+-----------------------HOW INTERNET WORKS-------------------------
+-> Internet is a wire which is buried in the ground
+-> Computers that we use are not servers they are actually clients which are connected indirectly to internet through Internet Service Provider(ISP)
+-> Anywhere two or more parts of the internet intersect there's a piece of equipment called router. Routers direct your packets around the internet
+
+---------RESTFUL SERVICES ----------------------------------------------
+REST: REpresentational State Transfer
+Example endpoint to work with customers: http://vidly.com/api/customers   -> In RESTFUL API we term  customers as resources
+By sending a req to this endpoint we can do CRUD operations with customers
+https://graph.facebook.com/youtube ---- we made an API req to fb's graph APIin which we'll get a JSON response 
+https://graph.facebook.com/youtube?fields=id,name,likes ----> we get json response with id,names and likes
+Server - maps.googleapis.com, resource - /maps,/api,/geocode,/json
+maps.googleapis.com/maps/api/geocode/json?address=chicago&sensor=false   --- return json as a response
+instagram.com/developer > Click on API Console  we can extract lat and long from google apis and then paste in instagram API console, we'll get whatever image or anything available at that particular location
+---------------------------------------PHASE1------------------------------------------
+FASTAPI:
+-> Create a directory using mkdir > Navigate to the created directory > create another directory > navigate to that > create a python virtual env using 'python -m venv .venv' 
+> activate the virtual env using '.venv\Scripts\activate' > check for python using 'where python' which gives venv python.exe path
+>
