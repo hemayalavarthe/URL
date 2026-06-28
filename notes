@@ -101,3 +101,4 @@ raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="post not foun
 -- two types of validations: template validation(through HTML when users interact- browser routes), through json validations(API routes)
 --PYDANTIC SCHEMAS--------------------
 PYDANTIC is a data validation library that uses python type hints
+--gives you detailed error messgaes when something doesn't match up 
