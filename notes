@@ -70,3 +70,34 @@ async def root():
 
 OPEN API: FastAPI generates a "schema" with all your API using the OpenAPI standard for defining APIs. This schema definition includes your API paths, the possible parameters they take
 In OpenAPI, each of the HTTP methods is called an "operation".
+
+---------------to commit changes to github after all updates to a file---------------------------
+git init
+git add .
+git commit -m 'any_msg_of_our_choice'
+git push
+--- fastapi by default returns json as a response. If we want to change that we need to import and add HTMLResponse in decorator as follows
+import fastapi.responses import HTMLResponse
+@app.get('/',response_class=HTMLResponse)
+in function we'll return f"<h1>{posts[0]['title']}</h1>"
+--If we want same functionality after clicking /posts then we add another decorator below app.get. It will look like as:
+@app.get('/',response_class=HTMLResponse)
+@app.get('/posts',response_class=HTMLResponse)
+--- {% extends "file_name" %}
+{% which block to overridd %}
+
+--{{ url_for("home")}} --> function name home
+{{ url_for("static",path="")}} -- if static files are renamed or removed then it is rerouted
+url_for usecase 
+1. route links like navigation
+2. for static files like css, js and images
+3. benefit : on updating the mount path, all the link will update automatically
+--Path parameters are variables that are part of URL path
+--HTTPException -- caughts theexception 
+--status -- returns the constants for HTTP status codes 
+raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="post not found")--raises a HTTP exception with 404 not found 
+--Validation errors are different exceptions(like unable to parse if string is given instead of number)
+--Starlette : Fastapi is built on top of starlette, so HTTPException in starlette captures the correct HTTP status codes
+-- two types of validations: template validation(through HTML when users interact- browser routes), through json validations(API routes)
+--PYDANTIC SCHEMAS--------------------
+PYDANTIC is a data validation library that uses python type hints
